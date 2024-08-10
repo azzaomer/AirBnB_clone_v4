@@ -11,8 +11,11 @@ from flasgger.utils import swag_from
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.register_blueprint(app_views)
-cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
-
+# TASK3:Before requesting the HBNB API,
+# it’s better to know the status of this one
+# Replacing CROS
+# cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
+cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
 @app.teardown_appcontext
 def close_db(error):

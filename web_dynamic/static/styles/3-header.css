@@ -9,3 +9,23 @@ header .logo {
     left: 20px;
     height: 100%;
 }
+
+#api_status {
+
+    /*Align to the right*/
+    /*align-items: center;*/
+    position: absolute;
+    right: 30px;
+    /*Circle of 40px diameter*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /*Center vertically*/
+    top: 50%;
+    transform: translateY(-50%);
+    /*At 30px of the right border*/
+    margin-right: 30px;
+    margin-top: 15px;
+    /*Background color #cccccc*/
+    background-color: #cccccc;
+}
