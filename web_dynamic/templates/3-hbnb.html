@@ -6,11 +6,13 @@
     <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?{{ cache_id }}">
     <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css?{{ cache_id }}">
     <link rel="icon" href="../static/images/icon.png" />
+    <script src="static/scripts/3-hbnb.js?{{ cache_id }}"></script>
     <title>HBnB</title>
   </head>
   <body>
     <header>
       <div class="logo"></div>
+      <div id="api_status"></div>
     </header>
     <div class="container">
       <section class="filters">
@@ -38,7 +40,7 @@
 	  <div class="popover">
 	    <ul>
 	      {% for amenity in amenities %}
-	      <li>{{ amenity.name }}</li>
+	      <li input type="checkbox" data-id=":amenity_id" name=":amenity_name">{{ amenity.name }}</li>
 	      {% endfor %}
 	    </ul>
 	  </div>
@@ -49,6 +51,8 @@
       <section class="places">
 	<!-- <h1>Places</h1> -->
 	{% for place in places %}
+    <!--  Remove this -->
+    <!-- 
 	<article>
 	  <div class="title_box">
 	    <h2>{{ place.name }}</h2>
@@ -65,7 +69,7 @@
           <div class="description">
 	    {{ place.description | safe }}
           </div>
-	</article>
+	</article>-->
 	{% endfor %}
       </section>
     </div>
