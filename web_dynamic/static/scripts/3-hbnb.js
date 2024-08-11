@@ -53,7 +53,7 @@ $(document).ready(init);
                     $('SECTION.places').append(article.join(''));
                   }
                 },
-                error: function (error) {
+            error: function (error) {
                     console.log(error);
                   }
                 
