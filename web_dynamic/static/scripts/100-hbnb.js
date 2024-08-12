@@ -3,6 +3,7 @@ $(document).ready(init);
 //if the checkbox is checked, you must store the State 
 //or City
 //ID in a variable (dictionary or list)
+    const HOST = '0.0.0.0';
     const statsObj = [];
     const cityObj = [];
     const amenityObj = [];
